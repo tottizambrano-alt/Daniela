@@ -132,6 +132,14 @@
 
         <div id="secret-content">
 
+<div class="container">
+        <!-- Le agregamos el id="emoji" para poder cambiarlo con JavaScript -->
+        <div class="heart" id="emoji">👻</div>
+        <h1 id="title"> Es para ti Daniela, Abrelo</h1>
+        <button class="btn" id="open-btn" onclick="revealMessage()">Abrir mensaje</button>
+
+        <div id="secret-content">
+
             <div class="foto-container">
                 <img src="foto macas 1.jpeg" alt="Foto">
             </div>
@@ -151,6 +159,8 @@
         function revealMessage() {
             document.getElementById('open-btn').style.display = 'none';
             document.getElementById('title').style.display = 'none';
+
+            // Esta línea cambia el fantasma por el corazón al hacer clic
             document.getElementById('emoji').innerHTML = '❤️';
 
             const content = document.getElementById('secret-content');
