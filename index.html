@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Es para ti, abrelo ❤️</title>
+    <title> Es para ti, abrelo </title>
     <style>
         * {
             margin: 0;
@@ -151,6 +151,7 @@
         function revealMessage() {
             document.getElementById('open-btn').style.display = 'none';
             document.getElementById('title').style.display = 'none';
+            document.getElementById('emoji').innerHTML = '❤️';
 
             const content = document.getElementById('secret-content');
             content.style.display = 'block';
