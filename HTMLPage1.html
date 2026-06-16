@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Es para ti, abrelo ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 400px;
+            transition: transform 0.3s ease;
+        }
+
+        h1 {
+            color: #d63031;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .btn {
+            background-color: #ff7675;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+            .btn:hover {
+                background-color: #d63031;
+                transform: scale(1.05);
+            }
+
+            .btn:active {
+                transform: scale(0.95);
+            }
+
+        /* Mensaje y foto ocultos al principio */
+        #secret-content {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        /* Estilo de foto tipo Polaroid */
+        .foto-container {
+            background: white;
+            padding: 15px 15px 30px 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            transform: rotate(-3deg); /* Le da un toque inclinado casual */
+            margin: 0 auto 25px auto;
+            max-width: 280px;
+        }
+
+            .foto-container img {
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+                display: block;
+            }
+
+        .texto-mensaje {
+            font-size: 1.3rem;
+            color: #2d3436;
+            line-height: 1.6;
+        }
+
+        .heart {
+            color: #d63031;
+            font-size: 3rem;
+            animation: pulse 1.5s infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heart">👻</div>
+        <h1 id="title"> Es para ti Daniela, Abrelo</h1>
+        <button class="btn" id="open-btn" onclick="revealMessage()">Abrir mensaje</button>
+
+        <div id="secret-content">
+
+            <div class="foto-container">
+                <img src="foto macas 1.jpeg" alt="Foto">
+            </div>
+
+            <div class="texto-mensaje">
+                <p>Hola Mi Danni</p>
+                <p>
+                    Quiero decirte que eres una maravillosa chica, que has aprendido mucho a lo largo de tu vida y ahora eres una persona madura,
+                    te Quiero muchote Daniela y valoro mucho tu presencia en mi vida ❤️✨
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('open-btn').style.display = 'none';
+            document.getElementById('title').style.display = 'none';
+
+            const content = document.getElementById('secret-content');
+            content.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
